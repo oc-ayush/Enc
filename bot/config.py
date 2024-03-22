@@ -32,7 +32,7 @@ class Config:
             self.BOT_TOKEN = config("BOT_TOKEN")
             self.CACHE_DL = config("CACHE_DL", default=False, cast=bool)
             self.CAP_DECO = config("CAP_DECO", default="◉")
-            self.C_LINK = config("C_LINK", default="@ANi_MiNE")
+            self.C_LINK = config("C_LINK", default="@OAF")
             self.CMD_SUFFIX = config("CMD_SUFFIX", default=str())
             self.DATABASE_URL = config("DATABASE_URL", default=None)
             self.DBNAME = config("DBNAME", default="ENC")
@@ -51,7 +51,7 @@ class Config:
                 "FFMPEG",
                 default='ffmpeg -i "{}" -preset ultrafast -c:v libx265 -crf 27 -map 0:v -c:a aac -map 0:a -c:s copy -map 0:s? "{}"',
             )
-            self.FL_CAP = config("FILENAME_AS_CAPTION", default=False, cast=bool)
+            self.FL_CAP = config("FILENAME_AS_CAPTION", default=True, cast=bool)
             self.FS_THRESHOLD = config("FLOOD_SLEEP_THRESHOLD", default=600, cast=int)
             self.FSTICKER = config("FSTICKER", default=None)
             self.LOCK_ON_STARTUP = config("LOCK_ON_STARTUP", default=False, cast=bool)
@@ -69,7 +69,7 @@ class Config:
             self.RSS_CHAT = config("RSS_CHAT", default=0, cast=int)
             self.RSS_DELAY = config("RSS_DELAY", default=60, cast=int)
             self.RSS_DIRECT = config("RSS_DIRECT", default=True, cast=bool)
-            self.RELEASER = config("RELEASER", default="A-M|ANi-MiNE")
+            self.RELEASER = config("RELEASER", default="Anonymous")
             self.TELEGRAPH_API = config(
                 "TELEGRAPH_API", default="https://api.telegra.ph"
             )
@@ -78,7 +78,7 @@ class Config:
             self.TG_DL_CLIENT = config("TG_DL_CLIENT", default="pyrogram")
             self.TG_UL_CLIENT = config("TG_UL_CLIENT", default="pyrogram")
             self.THUMB = config("THUMBNAIL", default=None)
-            self.USE_ANILIST = config("USE_ANILIST", default=True, cast=bool)
+            self.USE_ANILIST = config("USE_ANILIST", default=False, cast=bool)
             self.USE_CAPTION = config("USE_CAPTION", default=True, cast=bool)
             self.WORKERS = config("WORKERS", default=2, cast=int)
         except Exception:
